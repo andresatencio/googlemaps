@@ -19,6 +19,10 @@ $(function () {
 		var heatmap = new google.maps.visualization.HeatmapLayer({data: pointArray });
 		$('body').loadie(0.8);
 		heatmap.setMap(MAP);
+		// heatmap.set('opacity', 0.6)
+		// heatmap.set('radius', 5)
+		
+		heatmap.set('maxIntensity', 35)
 	}
 
 	function agregarKML(localidades) {
@@ -35,7 +39,7 @@ $(function () {
 	}
 
 	function inicio () {
-		var localidades = ['Chivilcoy'];
+		var localidades = ['Chivilcoy', 'SanNicolas'];
 
 		tomarDatos(function (err, data) {
 			pintarMapaDeCalor(data);
