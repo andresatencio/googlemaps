@@ -44,7 +44,6 @@ $(function () {
 		tomarDatos(function (err, data) {
 			pintarMapaDeCalor(data);
 			agregarKML(localidades);
-			Loadie.finish()
 		})
 
 
