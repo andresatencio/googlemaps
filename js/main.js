@@ -1,9 +1,10 @@
 $(function () {
-
+	$('body').loadie(0.6);
 	function tomarDatos (cb) {
 
 		var heatMap = [];
 		$.getJSON('data/Reclamos-mini.json', function (reclamos) {
+			$('body').loadie(0.7);
 			$("#r").html('Reclamos mapeados: ' + reclamos.length)
 			for (var i = 0; i < reclamos.length; i++) {
 				heatMap.push(new google.maps.LatLng(reclamos[i].lat, reclamos[i].lon));
@@ -16,6 +17,7 @@ $(function () {
 	function pintarMapaDeCalor(reclamosMapeados) {
 		var pointArray = new google.maps.MVCArray(reclamosMapeados);
 		var heatmap = new google.maps.visualization.HeatmapLayer({data: pointArray });
+		$('body').loadie(0.8);
 		heatmap.setMap(MAP);
 	}
 
@@ -27,6 +29,7 @@ $(function () {
 							.KmlLayer('https://github.com/andresatencio/cosas/raw/master/'+ localidades[i] +'.kmz', 
 								{ map: MAP, preserveViewport: true});
 			layer.setMap(MAP);
+			$('body').loadie(1);
 		}
 		
 	}
@@ -37,6 +40,7 @@ $(function () {
 		tomarDatos(function (err, data) {
 			pintarMapaDeCalor(data);
 			agregarKML(localidades);
+			Loadie.finish()
 		})
 
 
