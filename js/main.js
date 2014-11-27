@@ -39,7 +39,7 @@ $(function () {
 	}
 
 	function inicio () {
-		var localidades = ['Chivilcoy', 'SanNicolas'];
+		var localidades = ['Chivilcoy', 'SanNicolas', 'Junin'];
 
 		tomarDatos(function (err, data) {
 			pintarMapaDeCalor(data);
