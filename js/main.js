@@ -3,7 +3,7 @@ $(function () {
 	function tomarDatos (cb) {
 
 		var heatMap = [];
-		$.getJSON('data/Reclamos-mini.json', function (reclamos) {
+		$.getJSON('data/r1.json', function (reclamos) {
 			$('body').loadie(0.7);
 			$("#r").html('Reclamos mapeados: ' + reclamos.length)
 			for (var i = 0; i < reclamos.length; i++) {
