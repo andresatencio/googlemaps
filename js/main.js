@@ -87,26 +87,35 @@ $(function () {
 	var snazzy = new google.maps.StyledMapType(snazzy,{name: "Verde"});
 
 
+	// var MOPT = {
+	// 	zoom: ZOOM,
+	// 	center: CENTRO, 
+	// 	mapTypeControlOptions: {
+	//     	mapTypeIds: [google.maps.MapTypeId.ROADMAP, 
+	//       				google.maps.MapTypeId.HYBRID, 
+	//       				'Verde', 
+	//       				'Gris',
+	//       				'Wow',
+	//       				'Negro']
+	//     }
+	// };
+
 	var MOPT = {
 		zoom: ZOOM,
 		center: CENTRO, 
 		mapTypeControlOptions: {
-	      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 
-	      				google.maps.MapTypeId.HYBRID, 
-	      				'Verde', 
-	      				'Gris',
-	      				'Wow',
-	      				'Negro']
+	    	mapTypeIds: [google.maps.MapTypeId.ROADMAP, 
+	      				google.maps.MapTypeId.HYBRID]
 	    }
 	};
 
 	MAP = new google.maps.Map(document.getElementById('map'), MOPT);
 	google.maps.event.addDomListener(window, 'load', inicio);
 
-	MAP.mapTypes.set('Verde', snazzy);
-	MAP.mapTypes.set('Wow', vitamina);
-	MAP.mapTypes.set('Gris', greyScale);
-	MAP.mapTypes.set('Negro', muted);
+	// MAP.mapTypes.set('Verde', snazzy);
+	// MAP.mapTypes.set('Wow', vitamina);
+	// MAP.mapTypes.set('Gris', greyScale);
+	// MAP.mapTypes.set('Negro', muted);
  
 })
 
