@@ -73,7 +73,7 @@ $(function () {
 	}
 
 	function inicio () {
-		var localidades = ['Chivilcoy', 'SanNicolas', 'Junin'];
+		var localidades = ['Chivilcoy', 'SanNicolas', 'Junin', 'Campana'];
 
 		tomarDatos(function (err, data) {
 			pintarMapaDeCalor(data);
@@ -124,4 +124,4 @@ $(function () {
 	google.maps.event.addDomListener(window, 'load', inicio);
 })
 
-
+ 
