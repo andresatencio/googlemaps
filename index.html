@@ -1,13 +1,22 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title>Mapas Obras</title>
-	<style>
-	body {
-		padding: 50px;
-		font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	}
+	
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+</head>
+<body>
+	
+</body>
+</html> -->
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
 	a {
 		color: #00B7FF;
 	}
@@ -23,15 +32,81 @@
 		box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
 	}
 	</style>
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-</head>
-<body>
-	<h1>Mapas de obras</h1>
-	<p id="r"></p>
-	<div id="map"></div>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization"></script>
-	<script src="js/jquery.loadie.min.js"></script>
-	<script src="js/main.js"></script>
-</body>
-</html>
+	<title>Reclamos / Obras</title>
+
+	<!-- Bootstrap -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
+  <body>
+  	<!-- Static navbar -->
+  	<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  		<div class="container">
+  			<div class="navbar-header">
+  				<a class="navbar-brand" href="#">Mapa</a>
+  			</div>
+  		</div>
+  	</nav>
+
+  	<div class="container">
+  		<div class="page-header">
+  			<h1>Mapa de calor.<small> Reclamos / Obras</small></h1>
+  		</div>
+  		<div class="row">
+  			<div class="col-md-4">
+  				<div class="panel panel-default">
+  					<div class="panel-heading">Referencias</div>
+  					<div class="panel-body">
+  						<h4>Reclamos mapeados <span id="r" class="label label-success"></span></h4>
+  						<hr>
+						<img src="https://github.com/andresatencio/cosas/raw/master/negro.png" alt="CT nuevo"> CT nuevo
+						<hr>
+						<img src="https://github.com/andresatencio/cosas/raw/master/azul.png" alt="CT repotenciado"> CT repotenciado
+						<hr>
+						<img src="https://github.com/andresatencio/cosas/raw/master/et.png" alt="ET"> ET
+						<hr>
+						<img src="https://github.com/andresatencio/cosas/raw/master/LineaMT.png" alt="Linea MT"> Linea MT
+						<hr>
+						<img src="https://github.com/andresatencio/cosas/raw/master/LineaMTproyectada.png" alt="Linea MT Proyectada"> Linea MT Proyectada
+						<hr>
+						<img src="https://github.com/andresatencio/cosas/raw/master/ZonaInfluencia.png" alt="Zona influencia CT"> Zona influencia CT
+
+						
+  					</div>
+  				</div>
+  				
+  			</div>
+  			<div class="col-md-8">
+  				<div class="panel panel-default">
+  					<div class="panel-heading">Mapa</div>
+  					<div class="panel-body">
+  						<div id="map"></div>
+  					</div>
+  				</div>
+  				
+  			</div>
+  		</div>
+
+  	</div> <!-- /container -->
+
+
+
+
+
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization"></script>
+  	<script src="js/jquery.loadie.min.js"></script>
+  	<script src="js/main.js"></script>
+
+
+  	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </body>
+  </html>
+

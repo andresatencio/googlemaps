@@ -39,7 +39,7 @@ $(function () {
 		var heatMap = [];
 		$.getJSON('data/r1.json', function (reclamos) {
 			$('body').loadie(0.7);
-			$("#r").html('Reclamos mapeados: ' + reclamos.length)
+			$("#r").html(reclamos.length)
 			for (var i = 0; i < reclamos.length; i++) {
 				heatMap.push(new google.maps.LatLng(reclamos[i].lat, reclamos[i].lon));
 			}
